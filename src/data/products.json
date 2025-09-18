@@ -1,0 +1,8 @@
+[
+  { "id": 1, "name": "TypeScript Hoodie", "price": 45.00 },
+  { "id": 2, "name": "JavaScript Notebook", "price": 12.00 },
+  { "id": 3, "name": "CSS Art Print", "price": 18.00 },
+  { "id": 4, "name": "HTML Canvas Bag", "price": 22.00 },
+  { "id": 5, "name": "Node.js Cap", "price": 20.00 },
+  { "id": 6, "name": "Express.js Water Bottle", "price": 10.00 }
+]
