@@ -11,6 +11,7 @@ export async function GET() {
       products,
       timestamp: new Date().toISOString(),
       message: 'Data loaded dynamically at request time'
+
     };
 
     return NextResponse.json(response);

@@ -1,27 +1,331 @@
 [
-  { "id": 1, "name": "TypeScript Hoodie", "price": 45.00, "category": "apparel" },
-  { "id": 2, "name": "JavaScript Notebook", "price": 12.00, "category": "stationery" },
-  { "id": 3, "name": "CSS Art Print", "price": 18.00, "category": "art" },
-  { "id": 4, "name": "HTML Canvas Bag", "price": 22.00, "category": "bags" },
-  { "id": 5, "name": "Node.js Cap", "price": 20.00, "category": "accessories" },
-  { "id": 6, "name": "Express.js Water Bottle", "price": 10.00, "category": "drinkware" },
-  { "id": 7, "name": "TypeScript Tee", "price": 25.00, "category": "apparel" },
-  { "id": 8, "name": "Coding Sticky Notes", "price": 6.50, "category": "stationery" },
-  { "id": 9, "name": "Gradient Poster", "price": 14.00, "category": "art" },
-  { "id": 10, "name": "Canvas Tote - Logo", "price": 19.00, "category": "bags" },
-  { "id": 11, "name": "Node.js Keychain", "price": 5.00, "category": "accessories" },
-  { "id": 12, "name": "TypeScript Beanie", "price": 28.00, "category": "apparel" },
-  { "id": 13, "name": "JavaScript Pen Set", "price": 9.00, "category": "stationery" },
-  { "id": 14, "name": "Abstract CSS Print", "price": 20.00, "category": "art" },
-  { "id": 15, "name": "Leather Sling Bag", "price": 48.00, "category": "bags" },
-  { "id": 16, "name": "Express.js Socks", "price": 8.00, "category": "accessories" },
-  { "id": 17, "name": "Insulated Coffee Mug", "price": 15.00, "category": "drinkware" },
-  { "id": 18, "name": "TypeScript Jacket", "price": 75.00, "category": "apparel" },
-  { "id": 19, "name": "Water Bottle Sticker Pack", "price": 4.00, "category": "drinkware" },
-  { "id": 20, "name": "USB-C Hub", "price": 29.00, "category": "electronics" },
-  { "id": 21, "name": "Minimal Desk Mat", "price": 24.00, "category": "home" },
-  { "id": 22, "name": "Ceramic Plant Pot", "price": 16.00, "category": "home" },
-  { "id": 23, "name": "Robot Toy Figure", "price": 13.00, "category": "toys" },
-  { "id": 24, "name": "Wireless Mouse", "price": 33.00, "category": "electronics" },
-  { "id": 25, "name": "Running Shoes", "price": 60.00, "category": "shoes" }
+  {
+    "id": 1,
+    "name": "TypeScript Hoodie",
+    "price": 45.0,
+    "category": "apparel",
+    "sku": "SKU-00001",
+    "description": "Comfortable mid-weight hoodie with TypeScript logo, brushed interior and relaxed fit.",
+    "images": [
+      "https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=500&h=500&fit=crop&crop=center",
+      "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=500&h=500&fit=crop&crop=center",
+      "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=500&h=500&fit=crop&crop=center"
+    ]
+  },
+  {
+    "id": 2,
+    "name": "JavaScript Notebook",
+    "price": 12.0,
+    "category": "stationery",
+    "sku": "SKU-00002",
+    "description": "A5 hardcover notebook with JavaScript-themed cover and 160 dotted pages.",
+    "images": [
+      "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=500&h=500&fit=crop&crop=center",
+      "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=500&h=500&fit=crop&crop=center",
+      "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=500&h=500&fit=crop&crop=center"
+    ]
+  },
+  {
+    "id": 3,
+    "name": "CSS Art Print",
+    "price": 18.0,
+    "category": "art",
+    "sku": "SKU-00003",
+    "description": "High-quality giclée print featuring a modern CSS-inspired abstract design.",
+    "images": [
+      "https://images.unsplash.com/photo-1541961017774-22349e4a1262?w=500&h=500&fit=crop&crop=center",
+      "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=500&h=500&fit=crop&crop=center",
+      "https://images.unsplash.com/photo-1578843194947-f9c11bcbb3fa?w=500&h=500&fit=crop&crop=center",
+      "https://images.unsplash.com/photo-1549490349-8643362247b5?w=500&h=500&fit=crop&crop=center"
+    ]
+  },
+  {
+    "id": 4,
+    "name": "HTML Canvas Bag",
+    "price": 22.0,
+    "category": "bags",
+    "sku": "SKU-00004",
+    "description": "Durable canvas tote with printed HTML tag motif and reinforced handles.",
+    "images": [
+      "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=500&h=500&fit=crop&crop=center",
+      "https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?w=500&h=500&fit=crop&crop=center",
+      "https://images.unsplash.com/photo-1596462502722-6ba2ed6d55b3?w=500&h=500&fit=crop&crop=center"
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Node.js Cap",
+    "price": 20.0,
+    "category": "accessories",
+    "sku": "SKU-00005",
+    "description": "Adjustable baseball cap embroidered with Node.js logo, breathable cotton.",
+    "images": [
+      "https://images.unsplash.com/photo-1588850561407-ed78c282e89b?w=500&h=500&fit=crop&crop=center",
+      "https://images.unsplash.com/photo-1575428652377-a2d80e2277fc?w=500&h=500&fit=crop&crop=center",
+      "https://images.unsplash.com/photo-1521369909029-2afed882baee?w=500&h=500&fit=crop&crop=center"
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Express.js Water Bottle",
+    "price": 10.0,
+    "category": "drinkware",
+    "sku": "SKU-00006",
+    "description": "Stainless steel bottle with leak-proof lid and Express.js branding.",
+    "images": [
+      "https://images.unsplash.com/photo-1602143407151-7111542de6e8?w=500&h=500&fit=crop&crop=center",
+      "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=500&h=500&fit=crop&crop=center",
+      "https://images.unsplash.com/photo-1553434320-5c3229a55e72?w=500&h=500&fit=crop&crop=center"
+    ]
+  },
+  {
+    "id": 7,
+    "name": "TypeScript Tee",
+    "price": 25.0,
+    "category": "apparel",
+    "sku": "SKU-00007",
+    "description": "Soft cotton t-shirt featuring a subtle TypeScript chest print.",
+    "images": [
+      "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=500&h=500&fit=crop&crop=center",
+      "https://images.unsplash.com/photo-1583743814966-8936f37f4ec9?w=500&h=500&fit=crop&crop=center",
+      "https://images.unsplash.com/photo-1503341504253-dff4815485f1?w=500&h=500&fit=crop&crop=center"
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Coding Sticky Notes",
+    "price": 6.5,
+    "category": "stationery",
+    "sku": "SKU-00008",
+    "description": "Pack of colorful sticky notes with code-friendly grid and fun icons.",
+    "images": [
+      "https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=500&h=500&fit=crop&crop=center",
+      "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=500&h=500&fit=crop&crop=center",
+      "https://images.unsplash.com/photo-1567095761054-7a02e69e5c43?w=500&h=500&fit=crop&crop=center"
+    ]
+  },
+  {
+    "id": 9,
+    "name": "Gradient Poster",
+    "price": 14.0,
+    "category": "art",
+    "sku": "SKU-00009",
+    "description": "Large poster with smooth gradient design, printed on matte paper.",
+    "images": [
+      "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=500&h=500&fit=crop&crop=center",
+      "https://images.unsplash.com/photo-1554306297-0c86e837d24d?w=500&h=500&fit=crop&crop=center",
+      "https://images.unsplash.com/photo-1563089145-599997674d42?w=500&h=500&fit=crop&crop=center"
+    ]
+  },
+  {
+    "id": 10,
+    "name": "Canvas Tote - Logo",
+    "price": 19.0,
+    "category": "bags",
+    "sku": "SKU-00010",
+    "description": "Compact canvas tote bag with minimalist logo print, ideal for everyday use.",
+    "images": [
+      "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=500&h=500&fit=crop&crop=center",
+      "https://images.unsplash.com/photo-1596462502722-6ba2ed6d55b3?w=500&h=500&fit=crop&crop=center",
+      "https://images.unsplash.com/photo-1566150905458-1bf1fc113f0d?w=500&h=500&fit=crop&crop=center"
+    ]
+  },
+  {
+    "id": 11,
+    "name": "Node.js Keychain",
+    "price": 5.0,
+    "category": "accessories",
+    "sku": "SKU-00011",
+    "description": "Small metal keychain shaped like the Node.js hex logo.",
+    "images": [
+      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=500&h=500&fit=crop&crop=center",
+      "https://images.unsplash.com/photo-1541807084-d6238b2f7c0c?w=500&h=500&fit=crop&crop=center",
+      "https://images.unsplash.com/photo-1599420186946-7b6fb4e297f0?w=500&h=500&fit=crop&crop=center"
+    ]
+  },
+  {
+    "id": 12,
+    "name": "TypeScript Beanie",
+    "price": 28.0,
+    "category": "apparel",
+    "sku": "SKU-00012",
+    "description": "Knitted beanie with woven TypeScript label, warm and stretchy fit.",
+    "images": [
+      "https://images.unsplash.com/photo-1576871337622-98d48d1cf531?w=500&h=500&fit=crop&crop=center",
+      "https://images.unsplash.com/photo-1545558014-8692077e9b5c?w=500&h=500&fit=crop&crop=center",
+      "https://images.unsplash.com/photo-1564859227738-1a45fb09cfff?w=500&h=500&fit=crop&crop=center"
+    ]
+  },
+  {
+    "id": 13,
+    "name": "JavaScript Pen Set",
+    "price": 9.0,
+    "category": "stationery",
+    "sku": "SKU-00013",
+    "description": "Set of three smooth-ink pens with JS-themed barrel designs.",
+    "images": [
+      "https://images.unsplash.com/photo-1583485088034-697b5bc54ccd?w=500&h=500&fit=crop&crop=center",
+      "https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=500&h=500&fit=crop&crop=center",
+      "https://images.unsplash.com/photo-1514985760471-1efc1ef3bb6b?w=500&h=500&fit=crop&crop=center"
+    ]
+  },
+  {
+    "id": 14,
+    "name": "Abstract CSS Print",
+    "price": 20.0,
+    "category": "art",
+    "sku": "SKU-00014",
+    "description": "Abstract print inspired by CSS patterns, printed on archival stock.",
+    "images": [
+      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=500&h=500&fit=crop&crop=center",
+      "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=500&h=500&fit=crop&crop=center",
+      "https://images.unsplash.com/photo-1553789205-1fcb4c090a4e?w=500&h=500&fit=crop&crop=center",
+      "https://images.unsplash.com/photo-1549490349-8643362247b5?w=500&h=500&fit=crop&crop=center"
+    ]
+  },
+  {
+    "id": 15,
+    "name": "Leather Sling Bag",
+    "price": 48.0,
+    "category": "bags",
+    "sku": "SKU-00015",
+    "description": "Compact leather sling with adjustable strap and multiple pockets.",
+    "images": [
+      "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=500&h=500&fit=crop&crop=center",
+      "https://images.unsplash.com/photo-1596462502722-6ba2ed6d55b3?w=500&h=500&fit=crop&crop=center",
+      "https://images.unsplash.com/photo-1568195808996-71fc39fcf16c?w=500&h=500&fit=crop&crop=center"
+    ]
+  },
+  {
+    "id": 16,
+    "name": "Express.js Socks",
+    "price": 8.0,
+    "category": "accessories",
+    "sku": "SKU-00016",
+    "description": "Comfort ankle socks with Express.js motif and reinforced toe.",
+    "images": [
+      "https://images.unsplash.com/photo-1544966503-7cc5ac882d5f?w=500&h=500&fit=crop&crop=center",
+      "https://images.unsplash.com/photo-1581496280293-42a28de13bbc?w=500&h=500&fit=crop&crop=center",
+      "https://images.unsplash.com/photo-1604197745608-4012e4e8e8b8?w=500&h=500&fit=crop&crop=center"
+    ]
+  },
+  {
+    "id": 17,
+    "name": "Insulated Coffee Mug",
+    "price": 15.0,
+    "category": "drinkware",
+    "sku": "SKU-00017",
+    "description": "Double-walled insulated mug that keeps drinks hot or cold for hours.",
+    "images": [
+      "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=500&h=500&fit=crop&crop=center",
+      "https://images.unsplash.com/photo-1572119865084-43c285814d63?w=500&h=500&fit=crop&crop=center",
+      "https://images.unsplash.com/photo-1556909114-6d4cf1746492?w=500&h=500&fit=crop&crop=center"
+    ]
+  },
+  {
+    "id": 18,
+    "name": "TypeScript Jacket",
+    "price": 75.0,
+    "category": "apparel",
+    "sku": "SKU-00018",
+    "description": "Lightweight windbreaker with water-resistant coating and TS badge.",
+    "images": [
+      "https://images.unsplash.com/photo-1544022613-e87ca75a784a?w=500&h=500&fit=crop&crop=center",
+      "https://images.unsplash.com/photo-1581084324492-c8076f130f86?w=500&h=500&fit=crop&crop=center",
+      "https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?w=500&h=500&fit=crop&crop=center",
+      "https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?w=500&h=500&fit=crop&crop=center"
+    ]
+  },
+  {
+    "id": 19,
+    "name": "Water Bottle Sticker Pack",
+    "price": 4.0,
+    "category": "drinkware",
+    "sku": "SKU-00019",
+    "description": "Pack of assorted waterproof stickers sized for bottles and laptops.",
+    "images": [
+      "https://images.unsplash.com/photo-1612198188060-c7c2a3b66eae?w=500&h=500&fit=crop&crop=center",
+      "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=500&h=500&fit=crop&crop=center",
+      "https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?w=500&h=500&fit=crop&crop=center"
+    ]
+  },
+  {
+    "id": 20,
+    "name": "USB-C Hub",
+    "price": 29.0,
+    "category": "electronics",
+    "sku": "SKU-00020",
+    "description": "Compact multiport USB-C hub with HDMI, USB-A and SD card reader.",
+    "images": [
+      "https://images.unsplash.com/photo-1625842268584-8f3296236761?w=500&h=500&fit=crop&crop=center",
+      "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=500&h=500&fit=crop&crop=center",
+      "https://images.unsplash.com/photo-1542319630-8319bd04e6b5?w=500&h=500&fit=crop&crop=center"
+    ]
+  },
+  {
+    "id": 21,
+    "name": "Minimal Desk Mat",
+    "price": 24.0,
+    "category": "home",
+    "sku": "SKU-00021",
+    "description": "Large minimalist desk mat with non-slip base and stitched edges.",
+    "images": [
+      "https://images.unsplash.com/photo-1593062096033-9a26b09da705?w=500&h=500&fit=crop&crop=center",
+      "https://images.unsplash.com/photo-1556909114-6d4cf1746492?w=500&h=500&fit=crop&crop=center",
+      "https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?w=500&h=500&fit=crop&crop=center"
+    ]
+  },
+  {
+    "id": 22,
+    "name": "Ceramic Plant Pot",
+    "price": 16.0,
+    "category": "home",
+    "sku": "SKU-00022",
+    "description": "Hand-glazed ceramic pot suitable for small indoor plants and succulents.",
+    "images": [
+      "https://images.unsplash.com/photo-1485955900006-10f4d324d411?w=500&h=500&fit=crop&crop=center",
+      "https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=500&h=500&fit=crop&crop=center",
+      "https://images.unsplash.com/photo-1586690981916-fd76ae87ddff?w=500&h=500&fit=crop&crop=center"
+    ]
+  },
+  {
+    "id": 23,
+    "name": "Robot Toy Figure",
+    "price": 13.0,
+    "category": "toys",
+    "sku": "SKU-00023",
+    "description": "Collectible robot figure with articulated limbs and matte finish.",
+    "images": [
+      "https://images.unsplash.com/photo-1555617981-dac3880eac6e?w=500&h=500&fit=crop&crop=center",
+      "https://images.unsplash.com/photo-1571068316344-75bc76f77890?w=500&h=500&fit=crop&crop=center",
+      "https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?w=500&h=500&fit=crop&crop=center"
+    ]
+  },
+  {
+    "id": 24,
+    "name": "Wireless Mouse",
+    "price": 33.0,
+    "category": "electronics",
+    "sku": "SKU-00024",
+    "description": "Ergonomic wireless mouse with precision sensor and long battery life.",
+    "images": [
+      "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?w=500&h=500&fit=crop&crop=center",
+      "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=500&h=500&fit=crop&crop=center",
+      "https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=500&h=500&fit=crop&crop=center"
+    ]
+  },
+  {
+    "id": 25,
+    "name": "Running Shoes",
+    "price": 60.0,
+    "category": "shoes",
+    "sku": "SKU-00025",
+    "description": "Lightweight running shoes with breathable mesh and cushioned sole.",
+    "images": [
+      "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500&h=500&fit=crop&crop=center",
+      "https://images.unsplash.com/photo-1551107696-a4b0c5a0d9a2?w=500&h=500&fit=crop&crop=center",
+      "https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?w=500&h=500&fit=crop&crop=center",
+      "https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=500&h=500&fit=crop&crop=center"
+    ]
+  }
 ]
