@@ -1,9 +1,9 @@
-export default async function Page({
+export default function Page({
   params,
 }: {
-  params: Promise<{ slug: string }>
+  params: { slug: string };
 }) {
-  const { slug } = await params
-  return <div>My Post: {slug}</div>
+  console.log("slug is:", params.slug);
+  return <div>My Post: {params.slug}</div>;
 }
  

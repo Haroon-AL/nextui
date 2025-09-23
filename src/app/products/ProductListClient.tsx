@@ -8,28 +8,32 @@ export interface Product {
   category: string;
   price: number;
   images: string[];
+  sku: string;
 }
 
-async function loadPDP(product: Product) {
-  const response = await fetch('https://localhost:3000/api')
-  return(
-    <>
-      {response}
-    </>
-  )
+export async function loadPDP(product: Product) {
+  const res = await fetch(`/api/products/${product.sku}`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(product),
+  });
 
+  if (!res.ok) throw new Error(`API error ${res.status}: ${await res.text()}`);
+  return res.json();
 }
 
-export function IMG(url: string) {
+
+export function IMG(product:Product) {
   return (
     <div>
       <Image
-        src={url}
+        src={product.images[0]}
         alt="Product image"
         width={180}
         height={180}
         priority
         className='object-content mx-auto w-full'
+        onClick={()=>loadPDP(product)}
       />
     </div>
   )
@@ -79,12 +83,12 @@ export default function ProductListClient({ products }: Readonly<{ products: Pro
 
         {filtered.map((product: Product) => (
           <div key={product.id} className="border p-4 rounded-lg  bg-emerald-70" >
-            {IMG(product.images[0])}
+            {IMG(product)}
             <h2 className="text-xl font-semibold">{product.name}</h2>
             <h3 className="text-sm text-gray-500 capitalize">{product.category}</h3>
             <p className="text-gray-600">${product.price.toFixed(2)}</p>
             <button
-            onClick={()=>loadPDP}
+      
             className="
             bg-sky-450 mt-4 px-4 py-2 bg-teal-700 text-white rounded hover:bg-teal-600 cursor-pointer w-full
             ">Add to Cart</button>

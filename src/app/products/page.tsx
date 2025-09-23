@@ -6,6 +6,7 @@ interface Product {
   category: string;
   price: number;
   images:string[];
+  sku:string;
 }
  
 interface ApiResponse {

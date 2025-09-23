@@ -1,11 +1,7 @@
 import { NextResponse } from 'next/server';
-import { promises as fs } from 'fs';
-import path from 'path';
-import { Product } from '@/app/products/ProductListClient';
 
-export async function GET(request: Request,
-  { params }: { params: { product: Product } }) {
-
-  console.log(params,request)
-  return NextResponse.json("{}");
+export async function POST(request: Request, { params }: { params: { sku: string } }) {
+  const sku = params.sku;
+  const product = await request.json(); 
+  return NextResponse.json({ success: true, receivedSku: sku, receivedProduct: product });
 }
