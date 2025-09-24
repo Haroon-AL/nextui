@@ -1,27 +1,33 @@
-import Link from "next/link"
-import { ShoppingCart } from "lucide-react"
- 
+"use client";
+
+import Link from "next/link";
+import { ShoppingCart } from "lucide-react";
+import { useCartStore } from "@/store/cartStore";
+
 export default function Header() {
+  const totalItems = useCartStore((state) => state.getTotalItems());
+
   return (
-<header className="bg-white shadow">
-<div className="container mx-auto px-4 py-4 flex justify-between items-center">
-        {/* Store Name / Logo */}
-<Link href="/products" className="text-2xl font-bold text-gray-800">
+    <header className="bg-white shadow">
+      <div className="container mx-auto px-4 py-4 flex justify-between items-center">
+        <Link href="/" className="text-2xl font-bold text-gray-800">
           MyStore
-</Link>
- 
-        {/* Navigation / Cart */}
-<nav>
-<ul className="flex space-x-6">
-<li>
-<Link href="/cart" className="relative flex items-center gap-2">
-<ShoppingCart className="w-6 h-6" />
-<span>Cart</span>
-</Link>
-</li>
-</ul>
-</nav>
-</div>
-</header>
-  )
+        </Link>
+        <nav>
+          <ul className="flex space-x-4">
+            <li>
+              <Link href="/cart" className="relative">
+                <ShoppingCart className="w-6 h-6 text-gray-600 hover:text-gray-800" />
+                {totalItems > 0 && (
+                  <span className="absolute -top-2 -right-2 bg-blue-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center animate-pulse">
+                    {totalItems}
+                  </span>
+                )}
+              </Link>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+  );
 }
