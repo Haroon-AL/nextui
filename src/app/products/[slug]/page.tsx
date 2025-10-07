@@ -13,7 +13,6 @@ export default async function ProductPage({
   let product: Product | null = null;
   try {
     const res = await apiClient.get<{ product: Product }>(`/products/${slug}`);
-    // console.log(product)
     product = res.data.product;
   } catch {
     return <div>Failed to load product.</div>;

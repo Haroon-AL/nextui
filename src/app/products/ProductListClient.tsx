@@ -104,10 +104,8 @@ export default function ProductListClient({
   }
 
   function goNext() {
-    // console.log("goNext clicked", pagination);
     const next = pagination.current_page + 1;
     if (!pagination.has_next || next >= pagination.total_pages) {
-      // console.log("no next");
       return;
     }
     fetchPage(next);
