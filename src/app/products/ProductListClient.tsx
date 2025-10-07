@@ -104,10 +104,10 @@ export default function ProductListClient({
   }
 
   function goNext() {
-    console.log("goNext clicked", pagination);
+    // console.log("goNext clicked", pagination);
     const next = pagination.current_page + 1;
     if (!pagination.has_next || next >= pagination.total_pages) {
-      console.log("no next");
+      // console.log("no next");
       return;
     }
     fetchPage(next);
@@ -120,65 +120,67 @@ export default function ProductListClient({
   }
   return (
     <>
-      <div className="flex flex-col md:flex-row md:items-center gap-4 mb-4">
-        <div>
-          <label htmlFor="search" className="mr-2 font-semibold">
-            Search:
-          </label>
-          <input
-            id="search"
-            type="text"
-            placeholder="Search products..."
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
-            className="border rounded p-2 w-64"
-          />
-        </div>
-
-        <div>
-          <label htmlFor="category-filter" className="mr-2 font-semibold">
-            Filter by category:
-          </label>
-          <select
-            id="category-filter"
-            value={selectedCategory}
-            onChange={(e) => setSelectedCategory(e.target.value)}
-            className="border rounded p-2"
-          >
-            {brand.map((category) => (
-              <option key={category} value={category}>
-                {category.charAt(0).toUpperCase() + category.slice(1)}
-              </option>
-            ))}
-          </select>
-        </div>
-      </div>
-
-      {loading && <div className="text-center py-6">Loading products...</div>}
-      {error && <div className="text-center text-red-600 py-6">{error}</div>}
-
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 lg:gap-6">
-        {filtered.map((product) => (
-          <div key={product.id} className="border p-4 rounded-lg">
-            <div className="relative w-full h-48 mb-3">
-              <Image
-                onClick={() => Redirect(product)}
-                src={product.url ?? "/product.jpg"}
-                alt={product.name}
-                fill
-                className="object-cover rounded"
-              />
-            </div>
-            <h2 className="text-base font-medium mb-1">{product.name}</h2>
-            <h3 className="text-sm text-gray-500 capitalize mb-1">
-              {product.brand}
-            </h3>
-            <p className="text-lg font-bold mb-2">
-              ${product.price.value.toFixed(2)}
-            </p>
-            <AddToCartClient product={product} />
+      <div>
+        <div className="flex flex-col md:flex-row md:items-center gap-4 mb-4">
+          <div>
+            <label htmlFor="search" className="mr-2 font-semibold">
+              Search:
+            </label>
+            <input
+              id="search"
+              type="text"
+              placeholder="Search products..."
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              className="border rounded p-2 w-64"
+            />
           </div>
-        ))}
+
+          <div>
+            <label htmlFor="category-filter" className="mr-2 font-semibold">
+              Filter by category:
+            </label>
+            <select
+              id="category-filter"
+              value={selectedCategory}
+              onChange={(e) => setSelectedCategory(e.target.value)}
+              className="border rounded p-2"
+            >
+              {brand.map((category) => (
+                <option key={category} value={category}>
+                  {category.charAt(0).toUpperCase() + category.slice(1)}
+                </option>
+              ))}
+            </select>
+          </div>
+        </div>
+
+        {loading && <div className="text-center py-6">Loading products...</div>}
+        {error && <div className="text-center text-red-600 py-6">{error}</div>}
+
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 lg:gap-6">
+          {filtered.map((product) => (
+            <div key={product.id} className="border p-4 rounded-lg">
+              <div className="relative w-64 h-64">
+                <Image
+                  onClick={() => Redirect(product)}
+                  src={product.url ?? "/product.jpg"}
+                  alt={product.name}
+                  fill
+                  className="object-cover rounded"
+                />
+              </div>
+              <h2 className="text-base font-medium mb-1">{product.name}</h2>
+              <h3 className="text-sm text-gray-500 capitalize mb-1">
+                {product.brand}
+              </h3>
+              <p className="text-lg font-bold mb-2">
+                ${product.price.value.toFixed(2)}
+              </p>
+              <AddToCartClient product={product} />
+            </div>
+          ))}
+        </div>
       </div>
       <div className="mb-4 flex items-center justify-between m-2">
         <div>

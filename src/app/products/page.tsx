@@ -20,7 +20,7 @@ export async function getProducts(page = 0): Promise<ApiResponse> {
 export default async function Products2Page() {
   const data = await getProducts(0);
   return (
-    <main>
+    <main>  
       <h1>Products</h1>
       <ProductListClient
         initialProducts={data.products}
