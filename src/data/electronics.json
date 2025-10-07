@@ -1,0 +1,132 @@
+[
+  {
+    "id": 1,
+    "name": "Smartphone X200",
+    "price": 699.0,
+    "brand": "TechOne",
+    "sku": "SKU-10001",
+    "description": "6.5-inch OLED display smartphone with 128GB storage and dual cameras.",
+    "images": [
+      "https://images.unsplash.com/photo-1510557880182-3d4d3cba35a5?w=500&h=500&fit=crop&crop=center",
+      "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=500&h=500&fit=crop&crop=center",
+      "https://images.unsplash.com/photo-1556656793-08538906a9f8?w=500&h=500&fit=crop&crop=center"
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Wireless Earbuds Pro",
+    "price": 149.0,
+    "brand": "SoundWave",
+    "sku": "SKU-10002",
+    "description": "Noise-cancelling wireless earbuds with 24-hour battery life and touch controls.",
+    "images": [
+      "https://images.unsplash.com/photo-1585386959984-a4155223169a?w=500&h=500&fit=crop&crop=center",
+      "https://images.unsplash.com/photo-1606220933455-1e5b33b06e8a?w=500&h=500&fit=crop&crop=center",
+      "https://images.unsplash.com/photo-1593550231122-200bb738c7a9?w=500&h=500&fit=crop&crop=center"
+    ]
+  },
+  {
+    "id": 3,
+    "name": "4K LED Monitor 27\"",
+    "price": 299.0,
+    "brand": "VisionTech",
+    "sku": "SKU-10003",
+    "description": "Ultra HD 4K 27-inch monitor with HDR support and 144Hz refresh rate.",
+    "images": [
+      "https://images.unsplash.com/photo-1593642632823-8f785ba67e45?w=500&h=500&fit=crop&crop=center",
+      "https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04?w=500&h=500&fit=crop&crop=center",
+      "https://images.unsplash.com/photo-1588702547919-26089e690ecc?w=500&h=500&fit=crop&crop=center"
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Gaming Laptop GX15",
+    "price": 1199.0,
+    "brand": "AeroByte",
+    "sku": "SKU-10004",
+    "description": "High-performance gaming laptop with RTX graphics and 1TB SSD.",
+    "images": [
+      "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=500&h=500&fit=crop&crop=center",
+      "https://images.unsplash.com/photo-1587202372775-e229f172b9cb?w=500&h=500&fit=crop&crop=center",
+      "https://images.unsplash.com/photo-1610484826967-09c5720778cb?w=500&h=500&fit=crop&crop=center"
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Bluetooth Speaker Mini",
+    "price": 59.0,
+    "brand": "BeatBox",
+    "sku": "SKU-10005",
+    "description": "Portable Bluetooth speaker with 12-hour playtime and water resistance.",
+    "images": [
+      "https://images.unsplash.com/photo-1618365908648-e71bd5716b92?w=500&h=500&fit=crop&crop=center",
+      "https://images.unsplash.com/photo-1555617981-dac3880eac6e?w=500&h=500&fit=crop&crop=center",
+      "https://images.unsplash.com/photo-1612198188060-c7c2a3b66eae?w=500&h=500&fit=crop&crop=center"
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Smartwatch S5",
+    "price": 199.0,
+    "brand": "PulseWear",
+    "sku": "SKU-10006",
+    "description": "Fitness smartwatch with heart rate monitor, GPS, and waterproof design.",
+    "images": [
+      "https://images.unsplash.com/photo-1603791440384-56cd371ee9a7?w=500&h=500&fit=crop&crop=center",
+      "https://images.unsplash.com/photo-1603791440307-9a99e6fddd77?w=500&h=500&fit=crop&crop=center",
+      "https://images.unsplash.com/photo-1594007654729-407eedc4be65?w=500&h=500&fit=crop&crop=center"
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Noise-Cancelling Headphones",
+    "price": 249.0,
+    "brand": "AudioCore",
+    "sku": "SKU-10007",
+    "description": "Over-ear headphones with adaptive noise cancellation and 40-hour playback.",
+    "images": [
+      "https://images.unsplash.com/photo-1580894908361-967195033215?w=500&h=500&fit=crop&crop=center",
+      "https://images.unsplash.com/photo-1585386959984-a4155223169a?w=500&h=500&fit=crop&crop=center",
+      "https://images.unsplash.com/photo-1580894894512-d8b3c1db2d5e?w=500&h=500&fit=crop&crop=center"
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Wireless Charging Pad",
+    "price": 29.0,
+    "brand": "ChargePro",
+    "sku": "SKU-10008",
+    "description": "Slim wireless charging pad compatible with all Qi-enabled devices.",
+    "images": [
+      "https://images.unsplash.com/photo-1612198188060-c7c2a3b66eae?w=500&h=500&fit=crop&crop=center",
+      "https://images.unsplash.com/photo-1606813902735-0280b6e6b382?w=500&h=500&fit=crop&crop=center",
+      "https://images.unsplash.com/photo-1606220933455-1e5b33b06e8a?w=500&h=500&fit=crop&crop=center"
+    ]
+  },
+  {
+    "id": 9,
+    "name": "Mechanical Keyboard K80",
+    "price": 89.0,
+    "brand": "KeyMaster",
+    "sku": "SKU-10009",
+    "description": "RGB backlit mechanical keyboard with hot-swappable switches.",
+    "images": [
+      "https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04?w=500&h=500&fit=crop&crop=center",
+      "https://images.unsplash.com/photo-1587202372775-e229f172b9cb?w=500&h=500&fit=crop&crop=center",
+      "https://images.unsplash.com/photo-1580894908361-967195033215?w=500&h=500&fit=crop&crop=center"
+    ]
+  },
+  {
+    "id": 10,
+    "name": "1080p Webcam W50",
+    "price": 69.0,
+    "brand": "OptiView",
+    "sku": "SKU-10010",
+    "description": "Full HD webcam with autofocus and built-in stereo microphone.",
+    "images": [
+      "https://images.unsplash.com/photo-1606220933455-1e5b33b06e8a?w=500&h=500&fit=crop&crop=center",
+      "https://images.unsplash.com/photo-1606813902735-0280b6e6b382?w=500&h=500&fit=crop&crop=center",
+      "https://images.unsplash.com/photo-1625842268584-8f3296236761?w=500&h=500&fit=crop&crop=center"
+    ]
+  }
+]

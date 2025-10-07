@@ -1,39 +1,31 @@
-import ProductListClient from "./ProductListClient";
-
-interface Product {
-  id: number;
-  name: string;
-  description: string;
-  category: string;
-  price: number;
-  images: string[];
-  sku: string;
-}
+import ProductListClient, { Product, Pagination } from "./ProductListClient";
 
 interface ApiResponse {
   products: Product[];
   timestamp: string;
   message: string;
+  pagination: Pagination;
 }
 
-async function getProducts(): Promise<ApiResponse> {
-  const response = await fetch("http://localhost:3000/api/products", {
+export async function getProducts(page = 0): Promise<ApiResponse> {
+  const res = await fetch(`http://localhost:8080/v1/products?page=${page}`, {
     cache: "no-store",
   });
-  if (!response.ok) {
+  if (!res.ok) {
     throw new Error("Failed to fetch products");
   }
-  return response.json();
+  return res.json();
 }
 
 export default async function Products2Page() {
-  const data = await getProducts();
-
+  const data = await getProducts(0);
   return (
-    <main className="p-8 max-w-8xl sm:px-6 lg:px-12">
-      <h1 className="text-3xl font-bold mb-6"> Products</h1>
-      {/* <div> Generated at:{data.timestamp}</div> */}
-      <ProductListClient products={data.products} />
+    <main>
+      <h1>Products</h1>
+      <ProductListClient
+        initialProducts={data.products}
+        initialPagination={data.pagination}
+      />
     </main>
   );
 }

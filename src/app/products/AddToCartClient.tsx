@@ -2,13 +2,15 @@
 
 import { useState } from "react";
 import { useCartStore } from "@/store/cartStore";
+import Button from "./Button";
+import { Price } from "./ProductListClient";
 
 type cartProduct = {
   id: number;
   name: string;
-  price: number;
+  price: Price
   sku: string;
-  images?: string[];
+  images?: string;
 };
 
 export default function AddToCartClient({
@@ -23,8 +25,8 @@ export default function AddToCartClient({
       {
         id: product.id,
         name: product.name,
-        price: product.price,
-        image: product.images?.[0],
+        price: product.price.value,
+        image: product.images,
       },
       qty
     );
@@ -58,12 +60,9 @@ export default function AddToCartClient({
           isAdded ? "transition-all duration-200" : ""
         }`}
       >
-        <button
-          onClick={addToCart}
-          className="bg-emerald-600 hover:bg-emerald-700 text-white w-full py-2 rounded font-medium px-2"
-        >
+        <Button onClick={addToCart}>
           {isAdded ? "✓ Added!" : "Add to Cart"}
-        </button>
+        </Button>
       </div>
     </div>
   );

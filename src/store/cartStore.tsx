@@ -1,4 +1,4 @@
-import create, { SetState, GetState } from "zustand";
+import { create } from "zustand";
 
 export type CartItem = {
   id: number;
@@ -17,45 +17,43 @@ type CartState = {
   getTotalItems: () => number;
 };
 
-export const useCartStore = create<CartState>(
-  (set: SetState<CartState>, get: GetState<CartState>) => ({
-    items: {},
-    add: (item: Omit<CartItem, "quantity">, quantity = 1) => {
-      set((state) => {
-        const existing = state.items[item.id];
-        const newQuantity = (existing ? existing.quantity : 0) + quantity;
-        return {
-          items: {
-            ...state.items,
-            [item.id]: {
-              ...item,
-              quantity: newQuantity,
-            },
+export const useCartStore = create<CartState>((set, get) => ({
+  items: {},
+  add: (item: Omit<CartItem, "quantity">, quantity = 1) => {
+    set((state) => {
+      const existing = state.items[item.id];
+      const newQuantity = (existing ? existing.quantity : 0) + quantity;
+      return {
+        items: {
+          ...state.items,
+          [item.id]: {
+            ...item,
+            quantity: newQuantity,
           },
-        };
-      });
-    },
-    del: (id: number) => {
-      set((state) => {
-        if (!state.items[id]) return state;
-        const next = { ...state.items };
-        delete next[id];
-        return { items: next };
-      });
-    },
-    listCart: () => {
-      const items = get().items;
-      return Object.values(items);
-    },
-    getTotalItems: () => {
-      const items = get().items;
-      return Object.values(items).reduce(
-        (total, item) => total + item.quantity,
-        0
-      );
-    },
-    clear: () => set({ items: {} }),
-  })
-);
+        },
+      };
+    });
+  },
+  del: (id: number) => {
+    set((state) => {
+      if (!state.items[id]) return state;
+      const next = { ...state.items };
+      delete next[id];
+      return { items: next };
+    });
+  },
+  listCart: () => {
+    const items = get().items;
+    return Object.values(items);
+  },
+  getTotalItems: () => {
+    const items = get().items;
+    return Object.values(items).reduce(
+      (total, item) => total + item.quantity,
+      0
+    );
+  },
+  clear: () => set({ items: {} }),
+}));
 
 export default useCartStore;
